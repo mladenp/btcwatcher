@@ -1,0 +1,69 @@
+<div class="container">
+
+    <div class="jumbotron">
+
+        <div class="container">
+
+            <h1><span class="fa fa-eur"></span> <span class="fa fa-bitcoin"></span> BTC Watcher</h1>
+                <h2 class="btcValue">1 Bitcoin = {{ currentBTCvalue }} EUR</h2>
+                <h4>24 hour average</h4>
+                <span class="date">For date: {{ BTCvalueTimestamp }}</span>
+
+                <div ng-if="savedWatch" class="existingWatch">
+                    <p>Watching for BTC changes at {{ savedWatch.email }} for when 1 BTC costs more then {{ savedWatch.value }} EUR</p>
+                </div>
+
+                <form class="form-inline" name="formModal">
+                    <div class="form-group watchInputs" id="watch">
+
+                        <label for="emailField">Email me at</label>
+
+                        <input type="email" class="form-control" id="emailField"
+
+                               ng-model="formModal.email" placeholder="email@example.com" ng-required="true"  autofocus>
+
+                        <label for="valueField">When value of 1 BTC passes </label>
+
+                        <input type="number" class="form-control" id="valueField"
+                               ng-model="formModal.value" placeholder="{{ currentBTCvalue }} €" ng-required="true">
+
+                        <button type="submit" class="btn btn-default" ng-click="storeNotification(formModal.email, formModal.value)">
+                            <span class="fa fa-envelope"></span>
+                            Notify Me
+                        </button>
+
+                    </div>
+                </form>
+
+            <!-- Alerts & Notifications -->
+            <div class="floatAlerts">
+                <uib-alert
+                        ng-repeat="notice in notices"
+                        type="{{ notice.type }}"
+                        dismiss-on-timeout="{{ notice.time }}"
+                        close="notices.splice($index, 1);"
+                        ng-click="notices.splice($index, 1);">
+                    {{notice.msg}}
+                </uib-alert>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <canvas id="line" class="chart chart-line" chart-data="data"
+                    chart-labels="labels" chart-series="series" chart-options="options"
+                    chart-click="onClick">
+            </canvas>
+        </div>
+
+        <button class="btn btn-lg btn-primary" ng-click="openModal()">Donate</button>
+        <span>Donate to support BTC Watcher</span>
+        <p>Donations so far: <span class="amount">{{ allDonations }}€</span></p>
+
+
+        <footer>BTC Watcher - <a href="http://mladenpetrovic.com">Mladen Petrović</a> - <a href="mailto:mladenpetrovic88@gmail.com">mladenpetrovic88@gmail.com</a></footer>
+
+
+    </div>
+</div>
+

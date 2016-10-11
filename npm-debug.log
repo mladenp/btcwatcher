@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/mladen/.nvm/versions/node/v5.5.0/bin/node',
+1 verbose cli   '/home/mladen/.nvm/versions/node/v5.5.0/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'server' ]
+2 info using npm@3.3.12
+3 info using node@v5.5.0
+4 verbose stack Error: Failed to parse json
+4 verbose stack Unexpected token '/' at 29:62
+4 verbose stack     "client": "http-server ./app -a localhost -p 8000 -c-1", // Run client at l
+4 verbose stack                                                              ^
+4 verbose stack     at parseError (/home/mladen/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:379:11)
+4 verbose stack     at parseJson (/home/mladen/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:68:23)
+4 verbose stack     at /home/mladen/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+4 verbose stack     at /home/mladen/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:76:16
+4 verbose stack     at tryToString (fs.js:414:3)
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:401:12)
+5 verbose cwd /home/mladen/work/ngBTC
+6 error Linux 3.19.0-15-generic
+7 error argv "/home/mladen/.nvm/versions/node/v5.5.0/bin/node" "/home/mladen/.nvm/versions/node/v5.5.0/bin/npm" "run" "server"
+8 error node v5.5.0
+9 error npm  v3.3.12
+10 error file /home/mladen/work/ngBTC/package.json
+11 error code EJSONPARSE
+12 error Failed to parse json
+12 error Unexpected token '/' at 29:62
+12 error     "client": "http-server ./app -a localhost -p 8000 -c-1", // Run client at l
+12 error                                                              ^
+13 error File: /home/mladen/work/ngBTC/package.json
+14 error Failed to parse package.json data.
+14 error package.json must be actual JSON, not just JavaScript.
+14 error
+14 error This is not a bug in npm.
+14 error Tell the package author to fix their package.json file. JSON.parse
+15 verbose exit [ 1, true ]

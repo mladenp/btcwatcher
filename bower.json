@@ -1,0 +1,16 @@
+{
+  "name": "bitcoinChart",
+  "description": "Bitcoin chart",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mladenp/btcChart",
+  "private": false,
+  "dependencies": {
+  	"angular": "~1.5.0",
+  	"angular-bootstrap": "~0.14",
+    "angular-mocks": "~1.4.0",
+  	"angular-ui-router": "~0.2",
+    "bootstrap": "~3.1",
+    "fontawesome": "~4.6.0"
+  }
+
+}
