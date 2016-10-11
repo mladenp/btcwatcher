@@ -1,18 +1,15 @@
-# ng File Manager
+# Bitcoin price watcher notification & Graph
 
-### Tool Dependencies
-
-* `npm`, the [node package manager][npm] for build deps.
-* `bower`, a [client-side code package manager][bower] for app deps.
+### How to run
 
 ```
 npm install
 ```
 
-### Run the Application
+* `npm run server`, run node server on localhost:8080
+* `npm run client`, run angular app on localhost:8000
 
-```
-npm start
-```
 
-Now browse to the app at `http://localhost:8000/index.html`.
+
+
+Now browse to the app at `http://localhost:8000/`.
