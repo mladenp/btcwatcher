@@ -1,8 +1,7 @@
 var myApp = angular.module('myApp', [
     'ui.router',
     'ui.bootstrap',
-    'chart.js',
-    'angularCharts'
+    'chart.js'
 ])
 
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {

@@ -26,6 +26,7 @@
   },
 
   "scripts": {
+    "setup": "npm install && bower install",
     "client": "http-server ./app -a localhost -p 8000 -c-1 && open http://localhost:8000",
     "server": "nodemon index.js"
   }
